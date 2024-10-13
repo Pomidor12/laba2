@@ -1,7 +1,6 @@
 import random
 
 def get_user_choice():
-    """Получает выбор пользователя."""
     while True:
         user_choice = input("Выберите камень, ножницы или бумагу: ").lower()
         if user_choice in ["камень", "ножницы", "бумага"]:
@@ -10,15 +9,12 @@ def get_user_choice():
             print("Неверный выбор. Пожалуйста, введите 'камень', 'ножницы' или 'бумага'.")
 
 def get_computer_choice():
-    """Возвращает случайный выбор компьютера."""
     choices = ["камень", "ножницы", "бумага"]
     return random.choice(choices)
 
 def determine_winner(user_choice, computer_choice):
-    """Определяет победителя."""
     print(f"Вы выбрали: {user_choice}")
     print(f"Компьютер выбрал: {computer_choice}")
-
     if user_choice == computer_choice:
         return "Ничья!"
     elif (user_choice == "камень" and computer_choice == "ножницы") or \
