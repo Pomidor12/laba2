@@ -10,8 +10,11 @@ def calculate_age(birthdate_str):
     age = today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))
     return age
 
-if __name__ == "__main__":
+while __name__ == "__main__":
+    print('Для выхода из программы введите "q"')
     birthdate = input("Введите дату рождения в формате день.месяц.год (например 03.09.2014): ")
+    if birthdate == "q":
+        break
     try:
         age = calculate_age(birthdate)
         print(f"Ваш возраст: {age} лет")
